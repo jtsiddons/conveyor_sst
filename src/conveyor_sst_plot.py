@@ -157,7 +157,7 @@ def year_frame(year: str, path_sst: pl.DataFrame, maxabs: float):
     gl.top_labels = False
     gl.right_labels = False
     ax.set_title(year)
-    fig.suptitle('SST Difference Since 1982')
+    fig.suptitle('SST Difference Along Broecker\'s Ocean Conveyor Since 1982')
     plt.savefig(os.path.join(OUTDIR, f'{year}.png'))
 
 
