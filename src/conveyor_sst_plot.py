@@ -150,7 +150,8 @@ def year_frame(year: str, path_sst: pl.DataFrame, maxabs: float):
             transform=ccrs.Geodetic()
         )
 
-    fig.colorbar(plt.cm.ScalarMappable(norm=norm, cmap=cmap), ax=ax)
+    fig.colorbar(plt.cm.ScalarMappable(norm=norm, cmap=cmap),
+                 ax=ax, label='Change in SST (°C)')
 
     gl = ax.gridlines(draw_labels=True)
     gl.top_labels = False
