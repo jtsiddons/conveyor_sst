@@ -22,7 +22,7 @@ PATH_SST = (
     ] + [pl.lit(0).alias(YEARS[0])]
     )
 )
-print(PATH_SST)
+# print(PATH_SST)
 MAXABS = max(
     PATH_SST
     .select([
@@ -79,13 +79,6 @@ def draw_segment(path, year, i, ax):
     ]
     temp_diff = path[year][i]
 
-    if year == YEARS[0]:
-        print(lons)
-        print(lats)
-        print(temp_diff)
-        print('-'*20)
-        print('')
-
     ax.plot(
         lons,
         lats,
@@ -108,7 +101,7 @@ def year_frame(year: str):
         ax.plot(
             path['longitude'],
             path['latitude'],
-            linewidth=11,
+            linewidth=LWIDTH+4,
             color='black',
             transform=ccrs.Geodetic()
         )
